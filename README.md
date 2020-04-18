@@ -1,8 +1,8 @@
-# Segmentation and quantification of mature isolated myelin rings from serialEM of PNS 
+# Semi Manual segmentation of myelin profiles and g-ratio quantification 
 
 ## Overview
 
-Semi Manual segmentation of myelin profiles and g-ratio quantification.
+Semi Manual segmentation of myelin profiles and g-ratio quantification is done in three steps
  
 1) Automaticaly segment Inner profiles:
 	Open the image , run "CountMayelinatedAxons.ijm"  macro 
