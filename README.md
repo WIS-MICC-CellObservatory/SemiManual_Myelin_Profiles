@@ -1,4 +1,4 @@
-# Semi Manual segmentation of myelin profiles and g-ratio quantification 
+# Semi-manual segmentation of myelin profiles and g-ratio quantification 
 
 ## Overview
 
