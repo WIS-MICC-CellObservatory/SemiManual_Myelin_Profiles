@@ -30,9 +30,12 @@ Software package: Fiji (ImageJ)
 Workflow language: ImageJ macro
 
 Used in : 
-N-Wasp regulates oligodendrocyte myelination
-
-Christina Katanov, Nurit Novak, Anya Vainshtein, Jeffery L Dupree, and Elior Peles
+<p align="center">
+	<strong>N-Wasp regulates oligodendrocyte myelination</strong><br/> <br/>
+</p>
+<p align="center">
+	<strong> Christina Katanov, Nurit Novak, Anya Vainshtein, Jeffery L Dupree, and Elior Peles</strong> <br/> <br/>
+</p>
 
  
 
