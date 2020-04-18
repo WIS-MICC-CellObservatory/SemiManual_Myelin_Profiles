@@ -1,0 +1,71 @@
+ManualEditingInstructions_ForGRatio.txt
+
+Instructions for the Second step for semi-manual g-ratio quantification which is outline here:
+ 
+1) Open the image , run "CountMayelinatedAxons.ijm"  macro 
+	  It will ask you to draw a line along the scalebar, and select the relavant part of the image for analysis and  
+ 	  will find candidates of inner part of the mayelinated axons
+ 	  
+2) Open the image , drag and drop the FILINMAE_InnerRoiSet.zip file into Fiji 
+    Draw the outer parts of the malinated axon and add them to the RoiManager (see details below)
+    There may be  non-relevant detections, Don't bother to delete them, 
+    as the next step will include only matched pairs of inner&outer ROIs
+    Save the ROI file when done (see ManualEditingInstructions_ForGRatio.txt)
+    
+3) Open the image, run the "GratioOfManualOuter_MayelinatedAxons.ijm" macro
+    it will open the Roi file from step 2, find pairs of inner/outer ROIs and for each pair calculate the g-ratio
+
+
+Adding Inner ROIS
+==================
+You can simply use any of the drawing tools to draw a ROI around the mayelinated axon
+once you have done press 't' on the keyboard or click "Add" in the RoiManger 
+
+The Wand tool can be very useful for selecting the Inner parts
+Edit=>Selection=>Interpolate can help to smooth the selection
+Brush tool can help for fine tuning of existing selection or for full selection 
+
+see also: https://imagej.nih.gov/ij/docs/tools.html
+
+Once you added the Roi to the RoiManager, "Rename" it so it will start with "I-" 
+- Otherwise it will be discarded in the next step
+
+Updating Inner ROIS
+====================
+To SELECT a ROI you can either:
+- highlight it in the RoiManager
+- "Show All" Rois from the Roi Manager, and in the image window long left-click (few seconds) inside the Roi
+
+Once the Roi is selected , you can CHANGE it in several ways, eg: 
+- Use the brush Tool, if you start from inside the Roi - you enlarge it, 
+  if you start from outside you remove parts of the Roi
+
+When done, click "UPDATE" in the RoiManger, this will replace the Roi with the new corrected selection
+
+Deleting Inner ROIS
+====================
+You can delete Inner Roi by selecting it and then clicking "Delete" from RoiManager
+However, usualy you don't need to bother doing it as measurement is done only 
+using mayelinated axons that have matching pair of Inner and Outer Rois. 
+Inner Roi's that dont have matching Outer Roi, are discarded by the following macro
+
+Adding Outer ROIS
+==================
+You can simply use any of the drawing tools to draw a ROI around the mayelinated axon
+once you have done press 't' on the keyboard or click "Add" in the RoiManger 
+
+If the mayelin is of homogeneous thickness, you can select the inner Roi and expand it by the thickness. 
+to do this it will be easier to change the image (just for the manual editing) 
+to be in pixel units by: Analyze=>Set Scale=>Click to remove Scale
+You can measure the thickness using the line tool, you'll see the thickness in the Fiji  window (length value)
+to expand the Roi use: Edit=>Selection=>Enlarge 
+
+see also: https://imagej.nih.gov/ij/docs/tools.html
+
+Saving the file
+================
+for an image named: FileName.tif
+- From RoiManager: click "Deselect"
+- From RoiManager: click "More" => "Save", save the file into Results\FileName_InnerOuterRoiSet.zip
+  
+  
